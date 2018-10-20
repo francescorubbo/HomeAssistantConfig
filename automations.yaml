@@ -1,0 +1,16 @@
+- alias: 'Exterior Lighting on when dark outside'
+  trigger:
+    platform: sun
+    event: sunset
+    offset: '-00:45:00'
+  action:
+    service: switch.turn_on
+    entity_id: switch.outdoor_light
+
+- alias: 'Exterior Lighting off at midnight'
+  trigger:
+    platform: time
+    at: '23:50:00' 
+  action:
+    service: switch.turn_off
+    entity_id: switch.outdoor_light

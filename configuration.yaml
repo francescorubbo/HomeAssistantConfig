@@ -75,6 +75,12 @@ switch:
         command_on: "codesend 1332675"
         command_off: "codesend 1332684"
         friendly_name: "Outdoor Light"
+      projector:
+        command_on: "irsend SEND_ONCE BENQ_W1070 KEY_POWER"
+        command_off: "irsend --count 2 SEND_ONCE BENQ_W1070 KEY_SUSPEND"
+      receiver:
+        command_on: "irsend SEND_ONCE Denon KEY_POWER"
+        command_off: "irsend SEND_ONCE Denon KEY_POWER"
 
 emulated_hue:
   host_ip: 192.168.1.6
@@ -89,6 +95,6 @@ emulated_hue:
 device_tracker:
   - platform: netgear
     host: 192.168.1.1
-    
+    track_new_devices: false
     username: !secret netgear_username
     password: !secret netgear_password

@@ -14,3 +14,13 @@
   action:
     service: switch.turn_off
     entity_id: switch.outdoor_light
+
+#- alias: 'Living room light on when arriving home at night'
+#  trigger:
+#    platform: zone
+#    entity_id: device_tracker.francesosiphone
+#    zone: zone.home
+#    event: enter
+#  action:
+#    service: switch.turn_on
+#    entity_id: switch.living_room_light

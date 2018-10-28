@@ -77,7 +77,7 @@ switch:
         friendly_name: "Outdoor Light"
       projector:
         command_on: "irsend SEND_ONCE BENQ_W1070 KEY_POWER"
-        command_off: "irsend --count 2 SEND_ONCE BENQ_W1070 KEY_SUSPEND"
+        command_off: "irsend SEND_ONCE BENQ_W1070 KEY_SUSPEND; sleep 1; irsend SEND_ONCE BENQ_W1070 KEY_SUSPEND"
       receiver:
         command_on: "irsend SEND_ONCE Denon KEY_POWER"
         command_off: "irsend SEND_ONCE Denon KEY_POWER"
